@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="CFC104, VMware deploy" />
+    <meta name="description" content="如何部署 VMware 的虛擬機器" />
+    <meta name="author" content="Sean Lin" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./Picture/Icon/icon.png" />
+    <link rel="stylesheet" href="../styles/pageStyle.css" />
+    <title>5-6</title>
+  </head>
+  <main>
+    <h1>5-6 設定 esxi 主機的虛擬交換機 (vNetwork Standard Switch, vSS)</h1>
+    <br />
+
+    <div>
+      <h2>step 1. 使用 vShpere 登入 vc，選擇 esxi 01 主機</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/01.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 2.設定第一張網卡</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/02.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 3.移除 VM network 的連接</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/03.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 4.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/04.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 5. 新增網路</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/05.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 6.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/06.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 7. 選取、使用三張網卡</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/07.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 8. 給予名稱 Production (往後用於一般工作用連線)</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/08.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 9.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/09.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 10. 再次編輯 Production 的網卡</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/10.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 11. 新增連接</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/11.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 12.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/12.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 13. 給予名稱 Test (往後用於測試用連線)</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/13.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 14.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/14.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 15. 編輯 Production 的網卡配置</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/15.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 16.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/16.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 17. 設定以 vmnic1 & 2 為主，vmnic3 待命</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/17.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 18. 編輯 Test 的網卡配置</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/18.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 19.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/19.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 20. 設定以 vmnic3 為主，vmnic2 待命，不使用 vmnic1</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/20.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 21.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/21.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 22. 再次新增網路</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/22.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 23. 使用 VMkernel 的形式</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/23.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 24. 選擇一張網卡</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/24.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 25. 預計規劃給 iSCSI 使用</h2>
+      <p>名稱不可使用 iSCSI，會有衝突</p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/25.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 26. 給予 iSCSI 網卡一個 IP</h2>
+      <p>esxi 01 使用 192.168.2XX.51/24</p>
+      <p>esxi 02 使用 192.168.2XX.52/24</p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/26.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 27.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/27.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 28. 不設 gateway</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/28.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 29. 再次新增網路</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/29.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 30. 選擇 VMkernel 的形式</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/30.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 31.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/31.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 32. 規劃給 vMotion 使用，勾選 vMotion 的選項</h2>
+      <p>名稱不可只用 vMotion，會有衝突</p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/32.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 33. 給予 IP 位置</h2>
+      <p>esxi 01 使用 192.168.2XX.61/24</p>
+      <p>esxi 02 使用 192.168.2XX.62/24</p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/33.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 34.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/34.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 35.</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/35.png" alt="" />
+      <br />
+    </div>
+    <div>
+      <h2>step 36. esxi 02 的設定結果</h2>
+      <p></p>
+      <img src="../Picture/Step-modify/5 vc/06 vSS setting/36.png" alt="" />
+      <br />
+    </div>
+  </main>
+</html>

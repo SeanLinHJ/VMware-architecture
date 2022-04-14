@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+main {
+  padding: 1rem;
+  div {
+    h2 {
+      margin: 0.5rem 0rem;
+    }
+    p {
+      font-size: 1.3rem;
+      padding: 0.5rem;
+    }
+    img {
+      min-width: 40vw;
+      max-width: 1100px;
+    }
+  }
+}
+
+footer {
+  a {
+    font-size: 1.5rem;
+  }
+}
